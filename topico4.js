@@ -146,11 +146,116 @@ function areaQuadrado(lado){
 let botao = document.querySelector('.botao'); //Pega o primeiro elemento da classe botão
 botao.classList.add('azul') //adiciona a classe azul
 botao.innerText; //'Clique'
-botao.addEventListener('click', function(){console.log('Clicou');
+botao.addEventListener('click', function () {
+    console.log('Clicou');
 })
 
 
+//EXERCÍCIOS ---------------------------
+
+//NOMEIE 3 PROPRIEDADES OU MÉTODOS DE STRINGS
+
+let variavelExercicio = 'texto'
+//Métodos
+console.log(variavelExercicio.toLocaleUpperCase());
+console.log(variavelExercicio.toLowerCase());
+console.log(variavelExercicio.includes("mundo"));
+
+//Propriedades:
+
+console.log(variavelExercicio.length);
+console.log(variavelExercicio.charAt(1));
+console.log(variavelExercicio.indexOf("batata"));
+
+//Arrays e Loops
+
+//Array é um grupo de valores geralmente relacionados. Servem para guardarmos diferentes valores em uma única variável.
+
+let videoGames = ['Switch', 'PS5', 'Xbox'];
+videoGames[0] //Switch
+videoGames[2] //Xbox
+
+//Métodos e Propriedades de uma Array
+
+let videoGames1 = ['Switch', 'PS5', 'Xbox'];
+
+videoGames1.pop();//Remove o último item e retorna ele
+videoGames.push('3DS');//Adiciona ao final da Array
+videoGames.length;//3
+
+// For Loop
+
+//O for loop possui 3 partes, início, condição e incremento
+
+for (let numero = 0; numero < 10; numero++) //retorna de 0 a 9
+{
+    console.log(numero);
+}
+
+//While
+
+let i = 0
+
+while (i < 10) {
+    console.log(i);
+    i++
+    //retorna de 0 a 9 no console
+}
+
+//Array com Loop
+
+let videoGames2 = ['playstation1', 'playstation2', 'playstation3'];
+
+for (let i = 0; i < videoGames2.length; i++) {
+    console.log(videoGames2[i]);
+}
+
+//Break
+
+for (let i = 0; i < videoGames2.length; i++) {
+    console.log(videoGames2[i]);
+    if (videoGames2 == 'playstation2') {
+        break;
+    }
+}
+
+//forEach
+
+//forEach é um método que executa uma função para cada item da Array.
+//É uma forma mais simples de utilizarmos um loop com arrays (ou array-like)
+
+videoGames2.forEach(function (item) {
+    console.log(item);
+});
+
+// O argumento item será atribuído dinamicamente - Podemos passar os seguintes parâmetros: item, index e array.
+
+//EXERCÍCIOS ----------------------------
+
+//Crie uma array com os anos que o Brasil ganhou a copa e interaja com a array utilizando um loog, para cada ano mostrar no console a eguinte mensagem: O brasil ganou a copa de ANO;
+
+let anosVencedores = ['1958', '1962', '1970', '1994', '2002'];
+
+anosVencedores.forEach((item) => {
+    console.log(`O brasil ganhou a copa de ano ${item}`);
+});
+
+//Interaja com um loop nas frutas abaixo e pare ao encontrar Pera
+
+let frutas = ['banana', 'maçã', 'pera', 'uva', 'melancia']
+
+for(i = 0; i < frutas.length; i++)
+{
+    console.log(frutas[i]);
+    if(frutas[i] == 'pera')
+    {
+        break;
+    }
+    
+}
 
 
+//Coloque a última fruta do array acima em uma variável, sem remover a mesma da array, depois imprima essa variável no console
 
 
+let ultimaFruta
