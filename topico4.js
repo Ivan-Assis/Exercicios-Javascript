@@ -258,4 +258,6 @@ for(i = 0; i < frutas.length; i++)
 //Coloque a última fruta do array acima em uma variável, sem remover a mesma da array, depois imprima essa variável no console
 
 
-let ultimaFruta
+let ultimaFruta = frutas[frutas.length];
+
+console.log(ultimaFruta);
