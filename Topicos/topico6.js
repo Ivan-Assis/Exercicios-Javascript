@@ -55,26 +55,23 @@ imgs.forEach(function () {
 
 imgs.forEach(() => console.log(i++));
 
-
 //EXERCÍCIOS:
 
 //Adicioe a classe ativo a todos os itens do menu
 
-const ativoMenu = document.querySelectorAll('menu > *');
+const ativoMenu = document.querySelectorAll("menu > *");
 
-ativoMenu.forEach(function(item){
-    item.classList.add = ('.ativo');
+ativoMenu.forEach(function (item) {
+  item.classList.add = ".ativo";
 });
-
 
 //Remova a classe ativo de todos os itens do menu e mantenha apenas no primeiro
 
 ativoMenu.forEach((item, index) => {
-    if (index !== 0) {
-        item.classList.remove('ativo');
-    }
+  if (index !== 0) {
+    item.classList.remove("ativo");
+  }
 });
-
 
 //Verifique se as imagens possuyvem o atributo alt
 
@@ -88,5 +85,34 @@ imagensExemplo.forEach(function (item) {
   }
 });
 
+//ADDEVENTLISTENER
 
+//Adiciona uma função ao elemento, esta chamda de callback, que sera ativada assim que certo evento ocorrer neste elemento.
 
+const img = document.querySelector("img");
+
+//elemento.addEventListener(event, callback, options)
+
+img.addEventListener("click", function () {
+  console.log("clicou");
+});
+
+//Callback
+
+//Quando irá reutilizá-la é boa prática separar a função de callback do addEventListener, ou seja, declarar uma função ao invés de passar diretamente uma função anônima
+
+const img1 = document.querySelector("img");
+
+function callback() {
+  console.log("Clicou");
+}
+
+img1.addEventListener("click", callback);
+img1.addEventListener("click", callback()); //undefined
+img1.addEventListener("click", function () {
+  console.log("Clicou");
+});
+
+img.addEventListener("click", () => {
+  console.log("Clicou");
+});
