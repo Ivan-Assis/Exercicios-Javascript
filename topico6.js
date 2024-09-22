@@ -66,7 +66,27 @@ ativoMenu.forEach(function(item){
     item.classList.add = ('.ativo');
 });
 
-for(i = 1; i < ativoMenu.length; i++)
-{
-    
-}
+
+//Remova a classe ativo de todos os itens do menu e mantenha apenas no primeiro
+
+ativoMenu.forEach((item, index) => {
+    if (index !== 0) {
+        item.classList.remove('ativo');
+    }
+});
+
+
+//Verifique se as imagens possuyvem o atributo alt
+
+const imagensExemplo = document.querySelectorAll("img");
+
+imagensExemplo.forEach(function (item) {
+  if (item.hasAttribute("alt")) {
+    console.log(`Imagem com src ${item.src} tem o atributo alt.`);
+  } else {
+    console.log(`Imagem com src ${item.src} NÃO tem o atributo alt.`);
+  }
+});
+
+
+
